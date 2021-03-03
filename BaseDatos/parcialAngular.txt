@@ -1,0 +1,33 @@
+create database  parcialAngular 
+use parcialAngular
+
+
+
+create table usuarios(
+idUsuario int identity primary key,
+nombre  varchar(250),
+apellido  varchar(250),
+correo  varchar(300),
+direccion varchar (500),
+usuario  varchar(250),
+clave  varchar(200),
+fecha  datetime,
+imagen  varchar(max),
+
+
+)
+
+
+
+create table eventos(
+
+idEvento int identity primary key,
+fecha  datetime,
+evento varchar(300),
+lugar  varchar(300),
+costo  decimal(8,2),
+idUsuario int,
+foreign key(idUsuario) references usuarios (idUsuario) 
+
+
+)
